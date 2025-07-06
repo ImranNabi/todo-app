@@ -1,76 +1,137 @@
-# MERN TODO List App
+# 📝 Todo App — Hackathon Project Submission
 
-This is a TODO List application built using the MERN stack. It allows users to manage their tasks effectively.
+This project is a part of a hackathon run by [https://www.katomaran.com](https://www.katomaran.com)
 
-## Prerequisites
+---
 
-Before running the application, ensure you have the following installed:
-- Node.js and npm (Node Package Manager)
-- MongoDB
-- MongoDB Compass (for database management)
+## 🌐 Hosted Links
 
-## Setup Instructions
+- **Frontend**: [https://todo-app-jet-two-66.vercel.app/](https://todo-app-jet-two-66.vercel.app/)
+- **Backend**: [https://todo-app-production-6275.up.railway.app/](https://todo-app-production-6275.up.railway.app/)
+- **Project Demo Video**: [Click here to watch](https://drive.google.com/file/d/1T-WZ3APqBLu1W6M8vAhP_K5FEksFE4So/view?usp=sharing)
+
+---
+
+## ⚙ Tech Stack
+
+| Layer       | Technology Used                     |
+|-------------|-------------------------------------|
+| Frontend    | React.js, Tailwind CSS              |
+| Auth        | Google OAuth, JWT                   |
+| Backend     | Node.js, Express.js                 |
+| Database    | MongoDB Atlas                       |
+| Hosting     | Vercel (Frontend), Railway (Backend) |
+
+---
+
+## 🏗 Architecture Diagram
+
+![Todo App Architecture](https://i.imgur.com/YO7UcBd.png)
+
+> The app follows a 3-tier architecture:
+>
+> - **Client**: React.js frontend using Axios and Tailwind
+> - **Server**: Node.js + Express REST API with Google OAuth and JWT
+> - **Database**: MongoDB Atlas
+
+---
+
+## 📦 Folder Structure
+
+```
+root
+│
+├── client/ (React frontend)
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       └── App.js
+│
+├── server/ (Express backend)
+│   ├── controllers/
+│   ├── routes/
+│   ├── models/
+│   └── server.js
+│
+├── README.md
+└── .env (not pushed)
+```
+
+---
+
+## 🚀 Setup Instructions
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/AtharvaKulkarniIT/mern-todo-app.git
+git clone https://github.com/ImranNabi/todo-app.git
+cd todo-app
 ```
 
-### 2. Install dependencies
+### 2. Setup Frontend
 
 ```bash
-cd mern-todo-app/TODO
-
-# Split the terminal :
-
-# Install backend dependencies
-cd todo_backend
-npm install
-
-# Install frontend dependencies
+cd TODO
 cd todo_frontend
 npm install
-```
-
-### 3. MongoDB Setup
-
-- Open MongoDB Compass
-- Create a new database named `Todo`
-- Inside the `Todo` database, create a collection named `tasks`
-
-### 4. Server setup for database connection
-
-```bash
-PORT=5000  # Port number for the server (you can change it if needed)
-MONGO_URI=mongodb://127.0.0.1:27017/Todo  # MongoDB connection URI
-```
-
-### 5. Running the App
-
-```bash
-# Start the server (from the 'todo_backend' directory)
-npm start
-
-# Start the client (from the 'todo_frontend' directory)
 npm start
 ```
 
-The server will run on `http://localhost:5000` and the client on `http://localhost:3000`.
+### 3. Setup Backend
 
-## Usage
+```bash
+cd TODO
+cd todo_backend
+npm install
+npm start
+```
 
-- Open your web browser and go to `http://localhost:3000`.
-- You can add ,update tasks, mark them as completed or delete them.
+> ⚠️ Create a `.env` file in the `server/` folder with:
+>
+> ```env
+> MONGODB_URI=your_mongodb_atlas_uri
+> JWT_SECRET=your_secret_key
+> GOOGLE_CLIENT_ID=your_google_client_id
+> ```
 
-## Output
-![MERN TODO List App](https://drive.google.com/uc?id=135HfGq09XYieu-1sG9pQeQ41Sx1ytZ1m)
+---
 
-## Contributing
+## 📌 Assumptions
 
-Feel free to contribute to this project by submitting pull requests.
+- Google OAuth is the primary login method.
+- Each user can create, update, share, and delete their tasks.
+- Shared tasks are viewable via unique link.
+- Only users with tokens can view their tasks.
 
-## License
+---
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/AtharvaKulkarniIT/mern-todo-app/blob/main/LICENSE) file for details.
+## 📽 Demo Video
 
+🎥 [Watch the demo](https://drive.google.com/file/d/1T-WZ3APqBLu1W6M8vAhP_K5FEksFE4So/view?usp=sharing)
+
+---
+
+## 🤖 AI Tools Used
+
+- **ChatGPT**:
+  - Code refactoring and optimization
+  - Designed folder structure
+  - Drafted README and documentation
+
+> All prompts and AI interactions were used as assistive tools and are logged.
+
+---
+
+## ✅ Final Submission Highlights
+
+- ✅ Deployed full-stack app with auth and sharing
+- ✅ Clean, responsive and intuitive UI
+- ✅ Used Google OAuth for seamless login
+- ✅ Mobile friendly with native share API
+- ✅ Hosted on Vercel + Railway with MongoDB Atlas
+- ✅ Architecture, setup, and demo provided
+
+---
+
+### 📢 Submitted for: [https://www.katomaran.com](https://www.katomaran.com)
