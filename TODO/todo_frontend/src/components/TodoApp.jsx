@@ -16,7 +16,7 @@ const TodoApp = ({ user, setUser }) => {
 
   const fetchTodos = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/todos/get', {
+      const res = await axios.get('https://todo-app-production-6275.up.railway.app/todos/get', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTodos(res.data);
@@ -29,7 +29,7 @@ const TodoApp = ({ user, setUser }) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        'http://localhost:5000/todos/add',
+        'https://todo-app-production-6275.up.railway.app/todos/add',
         { task },
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -43,7 +43,7 @@ const TodoApp = ({ user, setUser }) => {
   const toggleComplete = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/todos/edit/${id}`,
+        `https://todo-app-production-6275.up.railway.app/todos/edit/${id}`,
         {},
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -56,7 +56,7 @@ const TodoApp = ({ user, setUser }) => {
   const updateTask = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/todos/update/${id}`,
+        `https://todo-app-production-6275.up.railway.app/todos/update/${id}`,
         { task: editValue },
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -70,7 +70,7 @@ const TodoApp = ({ user, setUser }) => {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/todos/delete/${id}`, {
+      await axios.delete(`https://todo-app-production-6275.up.railway.app/todos/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTodos(todos.filter((todo) => todo._id !== id));
