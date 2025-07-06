@@ -7,7 +7,7 @@ require('dotenv').config();
 const JWT_SECRET = process.env.JWT_SECRET;
 const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const app = express();
-app.use(cors({ origin: ['http://localhost:3000','https://todo-gl6pfnsoq-imrans-projects-25659def.vercel.app/login'] }));
+app.use(cors({ origin: ['http://localhost:3000','https://todo-app-jet-two-66.vercel.app/'] }));
 app.use(express.json());
 // console.log(process.env.MONGODB_URI);
 // mongoose.connect('mongodb+srv://imrannabi2005:Imran@kce786@cluster0.s2pq9rc.mongodb.net/todo-app?retryWrites=true&w=majority')
