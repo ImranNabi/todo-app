@@ -11,7 +11,7 @@ const Signup = ({ setUser }) => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://todo-app-production-6275.up.railway.app//auth/signup', { email, password });
+      const res = await axios.post('https://todo-app-production-6275.up.railway.app/auth/signup', { email, password });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
       setUser(res.data.user);
