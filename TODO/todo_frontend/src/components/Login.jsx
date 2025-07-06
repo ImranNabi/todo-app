@@ -12,7 +12,7 @@ const Login = ({ setUser }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/auth/login', { email, password });
+      const res = await axios.post('https://todo-app-production-6275.up.railway.app/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
       setUser(res.data.user);
@@ -25,7 +25,7 @@ const Login = ({ setUser }) => {
   const handleGoogleLogin = async (credentialResponse) => {
     try {
       // Send the credential token directly to your backend
-      const res = await axios.post('http://localhost:5000/auth/google-login', {
+      const res = await axios.post('https://todo-app-production-6275.up.railway.app/auth/google-login', {
         token: credentialResponse.credential
       });
       
