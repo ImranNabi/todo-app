@@ -84,7 +84,8 @@ npm start
 cd TODO
 cd todo_backend
 npm install
-npm start
+nodemon server.js
+
 ```
 
 > ⚠️ Create a `.env` file in the `server/` folder with:
